@@ -23,7 +23,7 @@ const Register = () => {
 
     async function onSubmit(e){
         try{
-            const response = await axios.post('http://localhost:8000/register',authDetails);
+            const response = await axios.post('https://chats-and-vibes.herokuapp.com/register',authDetails);
             localStorage.setItem("CC_Token",response.data.token)
             await getLoggedIn()
             makeToast('success','Account creation successful')

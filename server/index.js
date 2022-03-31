@@ -56,7 +56,7 @@ const server = app.listen(PORT||8000,()=>{
 const io = require('socket.io')(server,{
     pingTimeout:60000,
     cors: {
-        origin:'http://localhost:3000',
+        origin:["http://localhost:3000","https://chats-and-vibes.netlify.app"],
         methods:['GET','POST'],
         credentials:true
     }

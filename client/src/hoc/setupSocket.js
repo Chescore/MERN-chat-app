@@ -6,7 +6,7 @@ const SocketContext = createContext()
 
 const SetUpSocket = ({children}) => {
     const [socket,setSocket] = useState(null)
-    const ENDPOINT = 'http://localhost:8000';
+    const ENDPOINT = 'https://chats-and-vibes.herokuapp.com/';
     
     const setMySocket = useCallback(()=>{
         const token = localStorage.getItem("CC_Token")

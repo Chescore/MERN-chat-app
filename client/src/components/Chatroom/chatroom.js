@@ -97,7 +97,7 @@ const Chatroom = () => {
 
     async function getChatroomTitle(){
         try{
-            const response = await axios.get(`http://localhost:8000/${id}`,{
+            const response = await axios.get(`https://chats-and-vibes.herokuapp.com/${id}`,{
                 headers:{
                     Authorization:"Bearer " + localStorage.getItem('CC_Token')
                 }
@@ -110,7 +110,7 @@ const Chatroom = () => {
 
     async function getMessages(){
         try{
-            const response = await axios.get(`http://localhost:8000/messages/${id}`,{
+            const response = await axios.get(`https://chats-and-vibes.herokuapp.com/messages/${id}`,{
                 headers:{
                     Authorization:"Bearer " + localStorage.getItem('CC_Token')
                 }

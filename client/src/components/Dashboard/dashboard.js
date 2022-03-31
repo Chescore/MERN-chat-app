@@ -20,7 +20,7 @@ const Dashboard = () => {
 
     async function getRooms(){
         try{
-            const response = await axios.get('http://localhost:8000',{
+            const response = await axios.get('https://chats-and-vibes.herokuapp.com',{
                 headers:{
                     Authorization: "Bearer " + localStorage.getItem("CC_Token")
                 }
@@ -37,7 +37,7 @@ const Dashboard = () => {
 
     async function onSubmit(){
         try{
-            await axios.post('http://localhost:8000',chatrooms,{
+            await axios.post('https://chats-and-vibes.herokuapp.com/',chatrooms,{
                 headers:{
                     Authorization: "Bearer " + localStorage.getItem("CC_Token")
                 }

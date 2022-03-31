@@ -22,7 +22,7 @@ const Login = () => {
 
     async function onSubmit(){
         try{
-            const response = await axios.post("http://localhost:8000/login",authDetails);
+            const response = await axios.post("https://chats-and-vibes.herokuapp.com/login",authDetails);
             localStorage.setItem('CC_Token', response.data.token)
             await getLoggedIn();
             makeToast('success','Logged in successfully')
