@@ -29,7 +29,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 app.use(cors({
-    origin:["http://localhost:3000","https://mern-chat-app.netlify.app"],
+    origin:["http://localhost:3000","https://chats-and-vibes.netlify.app"],
     credentials:true
 }));
 
