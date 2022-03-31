@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Cormorant";
+    src: url("../public/font/Cormorant-MediumItalic.ttf");
+}
+
+@font-face {
+    font-family: "Spectral";
+    src: url("../public/font/Spectral-Light.ttf");
+}
+
+button,
+a{
+  -webkit-tap-highlight-color: transparent;
+}
+
+.height{
+  height: 90vh;
+}
+
+.max-height{
+  max-height: 90vh;
+}
+
+::-webkit-scrollbar{
+  width: 5px;
+}  
+
+::-webkit-scrollbar-thumb {
+  background: slategray;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
