@@ -97,7 +97,7 @@ const Chatroom = () => {
 
     async function getChatroomTitle(){
         try{
-            const response = await axios.get(`https://chats-and-vibes.herokuapp.com/${id}`,{
+            const response = await axios.get(`https://chats-and-vibes.up.railway.app/${id}`,{
                 headers:{
                     Authorization:"Bearer " + localStorage.getItem('CC_Token')
                 }
@@ -110,7 +110,7 @@ const Chatroom = () => {
 
     async function getMessages(){
         try{
-            const response = await axios.get(`https://chats-and-vibes.herokuapp.com/messages/${id}`,{
+            const response = await axios.get(`https://chats-and-vibes.up.railway.app/messages/${id}`,{
                 headers:{
                     Authorization:"Bearer " + localStorage.getItem('CC_Token')
                 }
@@ -177,7 +177,7 @@ const Chatroom = () => {
     },[messagesSent])
 
     return (
-        <div className='grid grid-rows-[50px_minmax(0,_0.96fr)] height shadow-2xl w-96'>
+        <div className='grid grid-rows-[50px_minmax(0,_0.96fr)] height shadow-2xl w-80 md:w-96'>
             <div className='text-slate-300 uppercase bg-blue-800 rounded-t-md p-2.5'>
                 <div className='flex justify-between'>
                 <span>
@@ -212,7 +212,7 @@ const Chatroom = () => {
                 </div>
                 <button onClick={sendMessage} 
                 className='select-none col-span-2 flex justify-center items-center bg-blue-800 hover:bg-blue-700 active:bg-blue-600'>
-                    <div className='pr-1 pb-1/2 font-spectral text-slate-300 uppercase'>
+                    <div className='pr-0 pb-1/2 font-spectral text-slate-300 uppercase'>
                         Send
                     </div>
                 </button>

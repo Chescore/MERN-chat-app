@@ -6,7 +6,7 @@ const SocketContext = createContext()
 
 const SetUpSocket = ({children}) => {
     const [socket,setSocket] = useState(null)
-    const ENDPOINT = 'https://chats-and-vibes.herokuapp.com/';
+    const ENDPOINT = 'https://chats-and-vibes.up.railway.app/';
     
     const setMySocket = useCallback(()=>{
         const token = localStorage.getItem("CC_Token")

@@ -22,7 +22,7 @@ const Login = () => {
 
     async function onSubmit(){
         try{
-            const response = await axios.post("https://chats-and-vibes.herokuapp.com/login",authDetails);
+            const response = await axios.post("https://chats-and-vibes.up.railway.app/login",authDetails);
             localStorage.setItem('CC_Token', response.data.token)
             await getLoggedIn();
             makeToast('success','Logged in successfully')
@@ -34,7 +34,7 @@ const Login = () => {
     }
 
     return (
-        <div className='bg-slate-200 rounded p-8 shadow-xl w-96'>
+        <div className='bg-slate-200 rounded p-8 shadow-xl w-80 md:w-96'>
             <div className='text-center text-2xl text-blue-800 font-bold'>
                 MEMBER
             </div>

@@ -14,7 +14,7 @@ const Home = () => {
     }
 
     return (
-        <div className='bg-slate-300 rounded p-8 shadow-xl w-96'>
+        <div className='bg-slate-300 rounded p-8 shadow-xl w-80 md:w-96'>
             <form onSubmit={handleSubmit(onSubmit)}>
             <div className='flex flex-col justify-center items-center pb-4'>
                 <div className='text-blue-800 py-6'>

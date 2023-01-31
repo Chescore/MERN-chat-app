@@ -23,7 +23,7 @@ const Register = () => {
 
     async function onSubmit(e){
         try{
-            const response = await axios.post('https://chats-and-vibes.herokuapp.com/register',authDetails);
+            const response = await axios.post('https://chats-and-vibes.up.railway.app/register',authDetails);
             localStorage.setItem("CC_Token",response.data.token)
             await getLoggedIn()
             makeToast('success','Account creation successful')
@@ -35,7 +35,7 @@ const Register = () => {
     }
 
     return (
-        <div className='bg-slate-200 rounded p-8 shadow-xl w-96'>
+        <div className='bg-slate-200 rounded p-8 shadow-xl w-80 md:w-96'>
             <div className='text-center text-2xl text-blue-800 font-bold tracking-widest'>
                 NEWCOMER
             </div>

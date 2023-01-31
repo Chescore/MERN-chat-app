@@ -20,7 +20,7 @@ const Dashboard = () => {
 
     async function getRooms(){
         try{
-            const response = await axios.get('https://chats-and-vibes.herokuapp.com',{
+            const response = await axios.get('https://chats-and-vibes.up.railway.app',{
                 headers:{
                     Authorization: "Bearer " + localStorage.getItem("CC_Token")
                 }
@@ -37,7 +37,7 @@ const Dashboard = () => {
 
     async function onSubmit(){
         try{
-            await axios.post('https://chats-and-vibes.herokuapp.com/',chatrooms,{
+            await axios.post('https://chats-and-vibes.up.railway.app/',chatrooms,{
                 headers:{
                     Authorization: "Bearer " + localStorage.getItem("CC_Token")
                 }
@@ -53,7 +53,7 @@ const Dashboard = () => {
     }
 
     return (
-        <div className='max-height bg-slate-200 scroll-smooth rounded  overflow-y-scroll p-8 shadow-xl w-96'>
+        <div className='max-height bg-slate-200 scroll-smooth rounded  overflow-y-scroll p-8 shadow-xl w-80 md:w-96'>
             <div className='text-center text-xl text-blue-800 font-bold'>
                 CHATROOM
             </div>
