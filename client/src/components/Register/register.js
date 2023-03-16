@@ -23,7 +23,7 @@ const Register = () => {
 
     async function onSubmit(e){
         try{
-            const response = await axios.post('https://chats-and-vibes.up.railway.app/register',authDetails);
+            const response = await axios.post('https://chats-and-vibes.onrender.com/register',authDetails);
             localStorage.setItem("CC_Token",response.data.token)
             await getLoggedIn()
             makeToast('success','Account creation successful')

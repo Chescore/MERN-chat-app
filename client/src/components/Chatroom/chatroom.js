@@ -97,7 +97,7 @@ const Chatroom = () => {
 
     async function getChatroomTitle(){
         try{
-            const response = await axios.get(`https://chats-and-vibes.up.railway.app/${id}`,{
+            const response = await axios.get(`https://chats-and-vibes.onrender.com/${id}`,{
                 headers:{
                     Authorization:"Bearer " + localStorage.getItem('CC_Token')
                 }
@@ -110,7 +110,7 @@ const Chatroom = () => {
 
     async function getMessages(){
         try{
-            const response = await axios.get(`https://chats-and-vibes.up.railway.app/messages/${id}`,{
+            const response = await axios.get(`https://chats-and-vibes.onrender.com/messages/${id}`,{
                 headers:{
                     Authorization:"Bearer " + localStorage.getItem('CC_Token')
                 }

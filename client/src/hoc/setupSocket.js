@@ -6,7 +6,7 @@ const SocketContext = createContext()
 
 const SetUpSocket = ({children}) => {
     const [socket,setSocket] = useState(null)
-    const ENDPOINT = 'https://chats-and-vibes.up.railway.app/';
+    const ENDPOINT = 'https://chats-and-vibes.onrender.com/';
     
     const setMySocket = useCallback(()=>{
         const token = localStorage.getItem("CC_Token")

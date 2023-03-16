@@ -20,7 +20,7 @@ const Dashboard = () => {
 
     async function getRooms(){
         try{
-            const response = await axios.get('https://chats-and-vibes.up.railway.app',{
+            const response = await axios.get('https://chats-and-vibes.onrender.com',{
                 headers:{
                     Authorization: "Bearer " + localStorage.getItem("CC_Token")
                 }
@@ -37,7 +37,7 @@ const Dashboard = () => {
 
     async function onSubmit(){
         try{
-            await axios.post('https://chats-and-vibes.up.railway.app/',chatrooms,{
+            await axios.post('https://chats-and-vibes.onrender.com/',chatrooms,{
                 headers:{
                     Authorization: "Bearer " + localStorage.getItem("CC_Token")
                 }
