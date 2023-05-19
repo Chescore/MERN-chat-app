@@ -3,11 +3,6 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "Cormorant";
-    src: url("../public/font/Cormorant-MediumItalic.ttf");
-}
-
-@font-face {
     font-family: "Spectral";
     src: url("../public/font/Spectral-Light.ttf");
 }

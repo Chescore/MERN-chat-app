@@ -9,7 +9,7 @@ axios.defaults.withCredentials = true
 
 function App() {
   return (
-    <div className='font-cormorant text-lg bg-gradient-to-tl from-cyan-700 to-purple-500'>
+    <div className='font-spectral'>
       <AuthContextProvider>
         <SetUpSocket>
           <Layout>

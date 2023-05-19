@@ -53,13 +53,13 @@ const Dashboard = () => {
     }
 
     return (
-        <div className='max-height bg-slate-200 scroll-smooth rounded  overflow-y-scroll p-8 shadow-xl w-80 md:w-96'>
-            <div className='text-center text-xl text-blue-800 font-bold'>
+        <div className='max-height scroll-smooth overflow-y-scroll p-8 shadow border w-80 md:w-96'>
+            <div className='text-center text-xl text-blue-800'>
                 CHATROOM
             </div>
             <form autoComplete='off' onSubmit={handleSubmit(onSubmit)}>
                 <div className='py-6'>
-                    <label className='text-purple-800'>Chatroom Name:</label><br/>
+                    <label className='text-blue-800'>Chatroom Name:</label><br/>
                     <input type='text' 
                     value={chatrooms.name}
                     {...register("name",{required:{
@@ -69,14 +69,16 @@ const Dashboard = () => {
                     }})}
                     onChange={(e)=>setChatrooms({...chatrooms,name:e.target.value})}
                     id='chatroom'
-                    className='font-spectral w-full bg-slate-200 px-3 py-1 text-base border-b-2 border-cyan-900 outline-none transition-ease-in-out m-0'/><br/>
+                    className=' w-full px-3 py-1 text-base border-b border-blue-900 outline-none transition-ease-in-out m-0'/><br/>
                     <div className='text-red-700'>
                         {errors?.name?.message}
                         {error? <div>{error}</div>:null }
                     </div>
                 </div>
                 <div className='flex flex-col justify-center items-center pb-4'> 
-                    <button className='select-none border-purple-900 hover:bg-purple-900 hover:text-slate-200 border-2 text-purple-900 font-spectral active:bg-purple-800 font-bold text-sm cursor-pointer outline-none text-center py-2 px-4 rounded-full'>
+                    <button className='select-none border-blue-800 border text-blue-900 text-sm 
+                                    cursor-pointer outline-none text-center py-2 px-4 rounded
+                                    hover:bg-blue-800 hover:text-white'>
                         CREATE CHATROOM
                     </button>
                 </div>
@@ -88,7 +90,9 @@ const Dashboard = () => {
                             <span className='py-2'>{item.name}</span>
                             <span>                  
                                 <Link to={`/chatroom/${item._id}`}>
-                                    <button className='select-none border-purple-900 hover:bg-purple-900 hover:text-slate-200 border-2 text-purple-900 font-spectral active:bg-purple-800 font-bold outline-none text-sm cursor-pointer text-center py-2 px-4 rounded-full'>
+                                    <button className='select-none border-blue-800 hover:bg-blue-800 
+                                                hover:text-white border text-blue-800 font-bold outline-none
+                                                 text-sm cursor-pointer text-center py-2 px-4 rounded-full'>
                                         JOIN
                                     </button>
                                 </Link>
