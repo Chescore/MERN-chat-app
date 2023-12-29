@@ -34,7 +34,7 @@ The site has already been deployed and you can check it out on https://chats-and
 
   bash
 
-    git clone https://github.com/your-username/mern-chat-app.git
+    git clone https://github.com/Chescore/MERN-chat-app.git
     cd mern-chat-app
 
 #### Install server dependencies:
